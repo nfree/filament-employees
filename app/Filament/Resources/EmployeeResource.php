@@ -59,6 +59,9 @@ class EmployeeResource extends Resource
                         ->reactive(),
                     Select::make('department_id')->relationship('department', 'name')
                         ->required(),
+                ]),
+
+                Card::make()->schema([
                     TextInput::make('first_name'),
                     TextInput::make('last_name'),
                     TextInput::make('address'),
